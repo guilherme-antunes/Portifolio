@@ -2,21 +2,37 @@ import {FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 import "../styles/components/socialnetworks.sass";
 
-const socialNetworks = [
-     {name:'linkedin', icon: <FaLinkedin/>, },
-     {name:'github', icon: <FaGithub />},
-     {name:'instagram', icon: <FaInstagram />},
+const instagram = [
+  {name:'instagram', icon: <FaInstagram />},
 ];
+const linkedin = [
+  {name:'linkedin', icon: <FaLinkedin />, },
+];
+const github = [
+  {name:'github', icon: <FaGithub />},
+]
 
 const SocialNetworks = () => {
   return (
   <section id='social-networks'>
-    {socialNetworks.map((network)=> (
-        <a href="#" className='social-btn' id={network.name} key={network.name}>
+    
+    {linkedin.map((network)=> (
+        <a href="https://www.linkedin.com/in/guilherme-henrique-antunes-009ab4231" className='social-btn' id={network.name} key={network.name}>
         {network.icon}
         </a>
-    ))}
-  </section>
+      ))},
+     {github.map((network)=> (
+        <a href="https://github.com/guilherme-antunes/" className='social-btn' id={network.name} key={network.name}>
+        {network.icon}
+        </a>
+      ))},
+    {instagram.map((network)=> (
+        <a href="https://www.instagram.com/gui.tarrist_/" className='social-btn' id={network.name} key={network.name}>
+        {network.icon}
+        </a>
+     ))}
+     </section>
+
   );
 };
 

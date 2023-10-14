@@ -19,6 +19,9 @@
         margin-bottom: .8rem
         border-bottom: 1px solid #444
         width: 100%
+        @media screen and (max-width: 550px) 
+            justify-content: flex-start
+        
 
     h3
         color: variables.$text-color-secondary
@@ -28,6 +31,7 @@
     p
         color: variables.$text-color
         font-weight: bold
+       
 
     svg
         background-color: variables.$bg-color
@@ -47,3 +51,5 @@
 
     .info-card:hover
         background-color: #3d32dc
+
+       

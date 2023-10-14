@@ -17,10 +17,16 @@
             width: 45%
             border-radius: variables.$card-border-radius
             justify-content: start
+            @media screen and (max-width: 550px) 
+                padding: 5px
 
             h3
                 color: variables.$text-color
                 margin-bottom: 1rem
+                @media screen and (max-width: 550px) 
+                    font-size: 14px
+                    display: inline
+                    
             
             svg
                 font-size: 6rem

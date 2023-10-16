@@ -8,6 +8,8 @@
         display: flex
         flex-wrap: wrap
         gap: 1.5rem
+        @media screen and (max-width: 550px)
+            gap: 0.5rem
 
         .technologies-card
             @include mixins.center
@@ -17,23 +19,34 @@
             width: 45%
             border-radius: variables.$card-border-radius
             justify-content: start
-            @media screen and (max-width: 550px) 
-                padding: 5px
+            @media screen and (max-width: 550px)
+                padding: 2px
+                justify-content: flex-end
+                align-items: flex-end
 
             h3
                 color: variables.$text-color
                 margin-bottom: 1rem
-                @media screen and (max-width: 550px) 
-                    font-size: 14px
-                    display: inline
-                    
-            
+                @media screen and (max-width: 550px)
+                    font-size: 10px
+                    display: inline-flex
+                    align-items: center
+
             svg
                 font-size: 6rem
+                @media screen and (max-width: 550px)
+                    font-size: 5rem
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    padding: 1px
+                    text-align: center
+                
+
         #html
             svg
                 color: #e44d26
-                
+
         #css
             svg
                 color: #0468b0
@@ -43,10 +56,11 @@
         #node
             svg
                 color: #83cd29
-    
+
         #react
             svg
                 color: #61dafb
 
         :hover
             background-color: #594fe3
+            

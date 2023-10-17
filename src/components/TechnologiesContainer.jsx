@@ -13,7 +13,7 @@ const technologies = [
   {id: 'css',name:"CSS3", icon: <DiCss3 />},
   {id: 'js',name:"JavaScript", icon: <DiJsBadge />},
   {id: 'node',name:"Node.js", icon: <DiNodejsSmall />},
-  {id: 'react',name:"React Native", icon: <DiReact />},
+  {id: 'react-native',name:"React Native", icon: <DiReact />},
   {id: 'react',name:"React", icon: <DiReact />},
 ];
 

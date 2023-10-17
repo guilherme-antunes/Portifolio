@@ -11,7 +11,7 @@ const AboutContainer = () => {
            
            
         </p>
-        <p>Dedicação e desafios são o que me movem e inspiram à aprender mais e buscar oportunidades para iniciar minha carreira na área da tecnologia.</p>
+        <p>Dedicação e desafios são as coisas que me movem e inspiram à aprender mais e buscar oportunidades para iniciar essa nova carreira na área da tecnologia..</p>
     </section>
   )
 }

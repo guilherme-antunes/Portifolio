@@ -23,6 +23,7 @@
                 padding: 2px
                 justify-content: flex-end
                 align-items: flex-end
+                
 
             h3
                 color: variables.$text-color
@@ -30,8 +31,10 @@
                 @media screen and (max-width: 550px)
                     font-size: 10px
                     display: inline-flex
-                    // margin-right: 3px
-
+                    margin-left: 1px
+                    padding: 2px 10px 2px 2px
+            
+                    
             svg
                 font-size: 6rem
                 @media screen and (max-width: 550px)
@@ -41,11 +44,15 @@
                     justify-content: center
                     padding: 1px
                     text-align: center
+                    margin-left: 1px 
+                    // margin-right: -5px
                 
 
         #html
             svg
                 color: #e44d26
+                @media screen and (max-width: 550px)
+                    padding: 0
 
         #css
             svg
@@ -53,6 +60,9 @@
         #js
             svg
                 color: #f0db4f
+                @media screen and (max-width: 550px)
+                    margin-right: -10px
+
         #node
             svg
                 color: #83cd29
@@ -60,6 +70,11 @@
         #react
             svg
                 color: #61dafb
+                
+        #react-native
+            svg
+                color: #ddebef
+                    
 
         :hover
             background-color: #594fe3

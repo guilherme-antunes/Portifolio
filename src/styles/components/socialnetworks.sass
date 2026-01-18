@@ -4,15 +4,63 @@
 #social-networks
     @include mixins.center
     gap: 1rem
-    margin: 1rem 0
+    margin: 2rem 0 0 0
+    padding-top: 1.5rem
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+    animation: fadeIn 1s ease-out
+    flex-wrap: wrap
+    
+    @media screen and (max-width: 550px)
+        gap: 0.8rem
+        margin-top: 1.5rem
+        padding-top: 1rem
 
     .social-btn
-        padding: .6rem
-        background-color: variables.$bg-color-secondary
+        padding: 0.8rem
+        background: linear-gradient(135deg, variables.$bg-color, variables.$bg-color-secondary)
         border-radius: variables.$card-border-radius
         color: #333
         font-size: 1.3rem
         @include mixins.center
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        cursor: pointer
+        position: relative
+        overflow: hidden
+        
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 0
+            height: 0
+            border-radius: 50%
+            background: rgba(90, 82, 250, 0.2)
+            transform: translate(-50%, -50%)
+            transition: width 0.3s, height 0.3s
+            z-index: -1
+        
+        &:hover
+            &:before
+                width: 100px
+                height: 100px
+            
+            background: variables.$gradient
+            border-color: rgba(90, 82, 250, 0.5)
+            box-shadow: 0 6px 20px rgba(90, 82, 250, 0.3)
+            transform: translateY(-3px)
+            
+            > svg
+                color: variables.$text-color
+                transform: scale(1.15)
+        
+        svg
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        
+        @media screen and (max-width: 550px)
+            padding: 0.7rem
+            font-size: 1.1rem
     
     #linkedin
         color: #0072b1
@@ -22,8 +70,3 @@
     
     #instagram
         color: #bc2a8d
-    
-    :hover
-        background: variables.$gradient
-        > svg
-            color: variables.$text-color

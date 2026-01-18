@@ -17,7 +17,7 @@ const SocialNetworks = () => {
   <section id='social-networks'>
     
     {linkedin.map((network)=> (
-        <a href="https://www.linkedin.com/in/guilherme-henrique-antunes-009ab4231" className='social-btn' id={network.name} key={network.name}>
+        <a href="https://www.linkedin.com/in/guilherme-antunes-72610331a/" className='social-btn' id={network.name} key={network.name}>
         {network.icon}
         </a>
       ))},

@@ -8,10 +8,8 @@ const AboutContainer = () => {
         <p>
            Bacharelado em Ciência da Computação pela Faculdade Meridional IMED de Passo Fundo - RS,
            venho aprimorando minhas skills em programação, desenvolvimento Front-End Web e Mobile.
-           
-           
         </p>
-        <p>Dedicação e desafios são as coisas que me movem e inspiram à aprender mais e buscar oportunidades para iniciar essa nova carreira na área da tecnologia.</p>
+        <p>Dedicação e desafios são as coisas que me movem e inspiram.</p>
     </section>
   )
 }

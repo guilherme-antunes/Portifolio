@@ -2,8 +2,8 @@
 @use '../mixins'
 
 #sidebar
-    background-color: variables.$bg-color
-    flex: 1 1 0
+    background: linear-gradient(135deg, variables.$bg-color 0%, variables.$bg-color-secondary 100%)
+    flex: 1 1 300px
     border-radius: variables.$container-border-radius
     display: flex
     align-items: center
@@ -11,14 +11,39 @@
     text-align: center
     position: relative
     padding: 4rem 0
-    @media screen and (max-width: 480px)
-        padding: 1rem 0
+    animation: slideInLeft 0.8s ease-out
+    box-shadow: 0 8px 32px rgba(90, 82, 250, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.05)
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    
+    &:hover
+        box-shadow: 0 12px 40px rgba(90, 82, 250, 0.15)
+    
+    @media screen and (max-width: 768px)
+        padding: 2.5rem 0
+        flex: 1 1 auto
+        
+    @media screen and (max-width: 600px)
+        padding: 1.5rem 0
+        flex: 0 1 auto
 
     img
-        max-width: 70%
+        max-width: 40%
         border-radius: variables.$container-border-radius
         position: absolute
-        top: -3rem
+        top: 6rem
+        animation: fadeIn 1s ease-out
+        border: 3px solid variables.$bg-color
+        box-shadow: 0 8px 24px rgba(90, 82, 250, 0.3)
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+        
+        &:hover
+            transform: scale(1.05)
+            box-shadow: 0 12px 32px rgba(90, 82, 250, 0.5)
+        
+        @media screen and (max-width: 600px)
+            max-width: 60%
+            top: -2rem
 
     .title
         color: variables.$text-color-secondary
@@ -26,7 +51,21 @@
         border-radius: variables.$card-border-radius
         margin-top: 13rem
         padding: .8rem 1.2rem
+        animation: fadeIn 1.2s ease-out
+        font-size: 0.9rem
+        font-weight: 500
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        
+        &:hover
+            color: variables.$text-color
+            background-color: rgba(90, 82, 250, 0.1)
+        
+        @media screen and (max-width: 600px)
+            margin-top: 10rem
+            padding: 0.6rem 1rem
+            font-size: 0.8rem
 
     .btn
         @include mixins.btn
-    
+        animation: fadeIn 1.4s ease-out
+        margin-top: 2rem

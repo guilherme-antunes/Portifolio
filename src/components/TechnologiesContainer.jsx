@@ -3,7 +3,12 @@ import{
   DiCss3,
   DiJsBadge,
   DiNodejsSmall,
-  DiReact
+  DiReact,
+  DiPhp,
+  DiJqueryLogo,
+  DiGit,
+  DiSass,
+  DiDocker,
 } from 'react-icons/di'
 
 import '../styles/components/technologiescontainer.sass'
@@ -13,8 +18,12 @@ const technologies = [
   {id: 'css',name:"CSS3", icon: <DiCss3 />},
   {id: 'js',name:"JavaScript", icon: <DiJsBadge />},
   {id: 'node',name:"Node.js", icon: <DiNodejsSmall />},
-  {id: 'react-native',name:"React Native", icon: <DiReact />},
+  {id: 'php',name:"PHP", icon: <DiPhp />},
   {id: 'react',name:"React", icon: <DiReact />},
+  {id: 'jquery',name:"Jquery", icon: <DiJqueryLogo />},
+  {id: 'git',name:"Git", icon: <DiGit />},
+  {id: 'docker',name:"Docker", icon: <DiDocker />},
+
 ];
 
 

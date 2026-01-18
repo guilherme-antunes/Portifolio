@@ -1,18 +1,48 @@
 @use 'variables'
-    
+
+// Animações globais
+@keyframes fadeIn
+    from
+        opacity: 0
+        transform: translateY(10px)
+    to
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes slideInLeft
+    from
+        opacity: 0
+        transform: translateX(-30px)
+    to
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes slideInRight
+    from
+        opacity: 0
+        transform: translateX(30px)
+    to
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes glow
+    0%, 100%
+        text-shadow: 0 0 5px rgba(90, 82, 250, 0.3)
+    50%
+        text-shadow: 0 0 20px rgba(90, 82, 250, 0.6)
+
 *
     padding: 0
     margin: 0
     font-family: variables.$font-stack
     box-sizing: border-box
 
-
 body
     background-color: variables.$body-bg-color
+    overflow-x: hidden
     
-    
-        
-
 a, svg
-    transition: .4s
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1)
     
+html
+    scroll-behavior: smooth

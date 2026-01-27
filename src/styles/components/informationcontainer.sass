@@ -14,11 +14,16 @@
     gap: 0.5rem
     
     @media screen and (max-width: 768px)
-        max-width: 100%
         padding: 1.2rem
         
     @media screen and (max-width: 550px) 
-        padding: 1rem
+        padding: 12px
+        background: none
+        box-shadow: none
+        border: none
+        &:hover 
+            box-shadow: none
+            
 
     .info-card
         @include mixins.center
@@ -44,6 +49,7 @@
             justify-content: flex-start
             font-size: 0.9rem
             padding: 0.8rem
+            border: none
         
     h3
         color: variables.$text-color-secondary
